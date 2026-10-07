@@ -1,242 +1,230 @@
-//Bai 1:
 
+//bai1:
+//class Student{
+//    private String name;
+//    private int mssv;
+//    private double diemCC;
+//    private double diemGK;
+//    private double diemCK;
+//    public Student(String name,double diemCC,double diemGK,double diemCK){
+//        this.name=name;
+//        this.mssv=mssv;
+//        this.diemCC=diemCC;
+//        this.diemGK=diemGK;
+//        this.diemCK=diemCK;
+//
+//    }
+//    public int getMssv(){
+//        return mssv;
+//    }
+//    public String getName(){
+//        return name;
+//    }
+//    public double getDiemCC(){
+//        return diemCC;
+//    }
+//    public double getDiemCK(){
+//        return diemCK;
+//    }
+//    public double getDiemGK(){
+//        return diemGK;
+//    }
+//    public void setDiemCC(double diemCCMoi){
+//        if(0<=diemCCMoi && diemCCMoi<=10){
+//            this.diemCC=diemCCMoi;
+//        }
+//    }
+//    public void setDiemGK(double diemGKMoi){
+//        if(0<=diemGKMoi && diemGKMoi<=10){
+//            this.diemGK=diemGKMoi;
+//        }
+//    }
+//    public void setDiemCK(double diemCKMoi){
+//        if(0<=diemCKMoi && diemCKMoi<=10){
+//            this.diemCK=diemCKMoi;
+//        }
+//
+//    }
+//    public double  diemTrungBinh(){
+//        double diemTB=this.diemCC*0.1+this.diemGK*0.3+this.diemCK*0.6;
+//        return diemTB;
+//    }
+//}
+//public class Main{
+//    public static void main(String[] args){
+//        Student sv1=new Student(12345678,"Nguyen Van A",9,9,9);
+//        Student sv2=new Student(12345679,"Nguyen Van b",9,8,10);
+//        Student sv3=new Student(12345677,"Nguyen Van C",10,10,6);
+//        System.out.println(sv1.getMssv());
+//        System.out.println(sv2.getMssv());
+//        System.out.println(sv3.getMssv());
+//        System.out.println(sv1.getName());
+//        System.out.println(sv2.getName());
+//        System.out.println(sv3.getName());
+//        sv1.setDiemCK(10);
+//        System.out.println(sv1.diemTrungBinh());
+//        System.out.println(sv2.diemTrungBinh());
+//        System.out.println(sv3.diemTrungBinh());
+//
+//}}
 
-//class Employee {
-//    public double tinhLuong() {
-//        return 0;
+//bài 2
+//
+//class Student{
+//private String name;
+//private String email;
+//private String sdt;
+//private String mssv;
+//static int counter=0;
+//private double diemCC;
+//private double diemGK;
+//private double diemCK;
+//public Student(String name,double diemCC,double diemGK,double diemCK){
+//    this.name=name;
+//    this.diemCC=diemCC;
+//    this.diemGK=diemGK;
+//    this.diemCK=diemCK;
+//    this.counter=counter+1;
+//    if(counter>=1 && counter<=9){
+//        this.mssv="B21DCCN00"+counter;
+//    }
+//    else if (counter>=10 && counter<=99){
+//        this.mssv="B21DCCN0"+counter;
+//    }
+//    else {
+//        this.mssv="B21DCCN"+counter;
+//    }
+//    }
+//    public String getMssv(){
+//    return mssv;
+//    }
+//    public Student  capNhatEmail(String email){
+//    this.email=email;
+//    return this;
+//}
+//    public Student capNhatSdt(String sdt){
+//    this.sdt=sdt;
+//    return this;
+//    }
+//    static int getTotalStudents(){
+//    return counter;
+//    }
+//}
+//public class Main{
+//
+//    public static void main(String[] args){
+//        Student sv = new Student("Lan", 8, 7.5, 9);
+//        Student sv2 = new Student("Anh", 8, 7.5, 9);
+//        Student sv3 = new Student("a", 8, 7.5, 9);
+//        sv.capNhatEmail("lan@ptit.edu.vn").capNhatSdt("0912345678");
+//        sv2.capNhatEmail("anh@ptit.edu.vn");
+//        sv2.capNhatSdt("09123456789");
+//
+//        System.out.println(sv.getMssv());
+//        System.out.println(Student.getTotalStudents());
+//
+//    }
+//}
+
+//bài 3
+
+//import java.util.ArrayList;
+//
+//class Student {
+//    private String name;
+//    private int mssv;
+//    private double diemCC;
+//    private double diemGK;
+//    private double diemCK;
+//
+//    public Student(int mssv, String name, double diemCC, double diemGK, double diemCK) {
+//        this.mssv = mssv;
+//        this.name = name;
+//        setDiemCC(diemCC);
+//        setDiemGK(diemGK);
+//        setDiemCK(diemCK);
+//    }
+//
+//    public int getMssv() { return mssv; }
+//    public String getName() { return name; }
+//
+//    public void setDiemCC(double diemCC) {
+//        if (diemCC >= 0 && diemCC <= 10) this.diemCC = diemCC;
+//    }
+//    public void setDiemGK(double diemGK) {
+//        if (diemGK >= 0 && diemGK <= 10) this.diemGK = diemGK;
+//    }
+//    public void setDiemCK(double diemCK) {
+//        if (diemCK >= 0 && diemCK <= 10) this.diemCK = diemCK;
+//    }
+//
+//    public double diemTrungBinh() {
+//        return this.diemCC * 0.1 + this.diemGK * 0.3 + this.diemCK * 0.6;
 //    }
 //}
 //
-//class OfficeEmployee extends Employee {
-//    private String ten;
-//    private int tuoi;
-//    private double tienLuong;
-//    private int ngayLam;
+//class Classroom {
+//    private String tenLop;
+//    private ArrayList <Student> danhSachSV;
 //
-//    public OfficeEmployee(String ten, int tuoi, int ngayLam) {
-//        this.ten = ten;
-//        this.tuoi = tuoi;
-//        this.ngayLam = ngayLam;
+//    public Classroom(String tenLop) {
+//        this.tenLop = tenLop;
+//        this.danhSachSV = new ArrayList<>();
 //    }
 //
-//    @Override
-//    public double tinhLuong() {
-//        tienLuong = 100 * ngayLam;
-//        return tienLuong;
-//    }
-//}
-//
-//class TechnicalEmployee extends Employee {
-//    private String ten;
-//    private int tuoi;
-//    private double tienLuong;
-//    private int gioLam;
-//    private double tiencong;
-//
-//    public TechnicalEmployee(String ten, int tuoi, int gioLam, double tiencong) {
-//        this.ten = ten;
-//        this.tuoi = tuoi;
-//        this.gioLam = gioLam;
-//        this.tiencong = tiencong;
+//    public void addStudent(Student s) {
+//        for (Student svDaCo : danhSachSV) {
+//            if (svDaCo.getMssv() == s.getMssv()) {
+//                throw new IllegalArgumentException("MSSV " + s.getMssv() + " đã tồn tại trong lớp!");
+//            }
+//        }
+//        danhSachSV.add(s);
 //    }
 //
-//    @Override
-//    public double tinhLuong() {
-//        tienLuong = tiencong * gioLam;
-//        return tienLuong;
+//    public String xepLoai(Student s) {
+//        double dtb = s.diemTrungBinh();
+//        if (dtb >= 8.0) {
+//            return "Giỏi";
+//        } else if (dtb >= 6.5) {
+//            return "Khá";
+//        } else if (dtb >= 5.0) {
+//            return "Trung bình";
+//        } else {
+//            return "Yếu";
+//        }
+//    }
+//
+//    public void inBangDiem() {
+//        System.out.println(" BẢNG ĐIỂM LỚP " + this.tenLop);
+//        for (Student s : danhSachSV) {
+//            System.out.printf("MSSV: %d | Tên: %-15s | ĐTB: %.2f | Xếp loại: %s\n",
+//                    s.getMssv(), s.getName(), s.diemTrungBinh(), xepLoai(s));
+//        }
+//        System.out.println("Sĩ số lớp: " + danhSachSV.size() + " sinh viên.");
 //    }
 //}
 //
 //public class Main {
 //    public static void main(String[] args) {
+//        Classroom lopIT = new Classroom("UDU");
 //
-//        Employee[] danhSach = {
-//                new OfficeEmployee("NV Văn phòng A", 25, 22),
-//                new TechnicalEmployee("NV Kỹ thuật B", 28, 160, 15.5)
-//        };
+//        Student sv1 = new Student(12345678, "Nguyen Van A", 9, 9, 9);
+//        Student sv2 = new Student(12345679, "Nguyen Van B", 6, 7, 6);
+//        Student sv3 = new Student(12345680, "Nguyen Van C", 4, 4, 5);
+//        Student sv4 = new Student(12345678, "Nguyen Van D (Trùng)", 10, 10, 10);
 //
-//        for (Employee nv : danhSach) {
-//            nv.tinhLuong();
-//            System.out.println("Lương nhận được là: " + nv.tinhLuong());
+//        lopIT.addStudent(sv1);
+//        lopIT.addStudent(sv2);
+//        lopIT.addStudent(sv3);
+//
+//        System.out.println("Đang thử thêm sinh viên SV4 (bị trùng mã)...");
+//        try {
+//            lopIT.addStudent(sv4);
+//            System.out.println("Thêm thành công");
+//        } catch (IllegalArgumentException e) {
+//            System.out.println("Lỗi chặn dữ liệu: " + e.getMessage());
 //        }
-//    }
-//}
-
-
-
-
-//Bai2
-
-
-//interface EmailSender {
-//    void sendEmail();
-//}
 //
-//interface Programmer {
-//    void code();
-//}
-//
-//interface Salesperson {
-//    void sell();
-//}
-//
-//class OfficeEmployee implements EmailSender {
-//    private String name;
-//
-//    public OfficeEmployee(String name) {
-//        this.name = name;
-//    }
-//
-//    @Override
-//    public void sendEmail() {
-//        System.out.println(name + " đang gửi email.");
-//    }
-//}
-//
-//class TechnicalEmployee implements EmailSender, Programmer {
-//    private String name;
-//
-//    public TechnicalEmployee(String name) {
-//        this.name = name;
-//    }
-//
-//    @Override
-//    public void sendEmail() {
-//        System.out.println(name + " đang gửi email.");
-//    }
-//
-//    @Override
-//    public void code() {
-//        System.out.println(name + " đang lập trình.");
-//    }
-//}
-//
-//class SalesEmployee implements EmailSender, Salesperson {
-//    private String name;
-//
-//    public SalesEmployee(String name) {
-//        this.name = name;
-//    }
-//
-//    @Override
-//    public void sendEmail() {
-//        System.out.println(name + " đang gửi email.");
-//    }
-//
-//    @Override
-//    public void sell() {
-//        System.out.println(name + " đang bán hàng.");
-//    }
-//}
-//
-//public class MainBai2 {
-//    public static void main(String[] args) {
-//        OfficeEmployee nv1 = new OfficeEmployee("NV Văn phòng");
-//        TechnicalEmployee nv2 = new TechnicalEmployee("NV Kỹ thuật");
-//        SalesEmployee nv3 = new SalesEmployee("NV Bán hàng");
-//
-//        nv1.sendEmail();
-//
-//        nv2.code();
-//        nv2.sendEmail();
-//
-//        nv3.sell();
-//        nv3.sendEmail();
-//    }
-//}
-
-
-
-
-//Bai 3:
-
-
-//abstract class PaymentMethod {
-//    String paymentType;
-//    String methodName;
-//
-//    public PaymentMethod(String paymentType, String methodName) {
-//        this.paymentType = paymentType;
-//        this.methodName = methodName;
-//    }
-//
-//    public abstract void pay(double amount);
-//}
-//
-//class CreditCard extends PaymentMethod {
-//    public CreditCard() {
-//        super("Không dùng tiền mặt", "thẻ tín dụng");
-//    }
-//
-//    @Override
-//    public void pay(double amount) {
-//        System.out.println("Thanh toán " + (int)amount + " bằng " + methodName + ".");
-//    }
-//}
-//
-//class PayPal extends PaymentMethod {
-//    public PayPal() {
-//        super("Không dùng tiền mặt", "PayPal");
-//    }
-//
-//    @Override
-//    public void pay(double amount) {
-//        System.out.println("Thanh toán " + (int)amount + " qua " + methodName + ".");
-//    }
-//}
-//
-//class Cash extends PaymentMethod {
-//    public Cash() {
-//        super("Trực tiếp", "tiền mặt");
-//    }
-//
-//    @Override
-//    public void pay(double amount) {
-//        System.out.println("Thanh toán " + (int)amount + " bằng " + methodName + ".");
-//    }
-//}
-//
-//class MoMo extends PaymentMethod {
-//    public MoMo() {
-//        super("Không dùng tiền mặt", "MoMo");
-//    }
-//
-//    @Override
-//    public void pay(double amount) {
-//        System.out.println("Thanh toán " + (int)amount + " qua " + methodName + ".");
-//    }
-//}
-//
-//class Order {
-//    String customerName;
-//    double amount;
-//    PaymentMethod paymentMethod;
-//
-//    public Order(String customerName, double amount, PaymentMethod paymentMethod) {
-//        this.customerName = customerName;
-//        this.amount = amount;
-//        this.paymentMethod = paymentMethod;
-//    }
-//
-//    public void checkout() {
-//        System.out.println("Khách hàng: " + customerName);
-//        paymentMethod.pay(amount);
-//        System.out.println();
-//    }
-//}
-//
-//public class MainBai3 {
-//    public static void main(String[] args) {
-//        Order order1 = new Order("An", 200000, new CreditCard());
-//        order1.checkout();
-//
-//        Order order2 = new Order("Bình", 150000, new PayPal());
-//        order2.checkout();
-//
-//        Order order3 = new Order("Chi", 100000, new Cash());
-//        order3.checkout();
-//
-//        Order order4 = new Order("Dũng", 300000, new MoMo());
-//        order4.checkout();
+//        lopIT.inBangDiem();
 //    }
 //}
